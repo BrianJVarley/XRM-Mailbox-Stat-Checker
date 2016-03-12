@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Xrm-mailbox-stat-checker by BrianJVarley</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Xrm-mailbox-stat-checker</h1>
+      <h2 class="project-tagline">The XRM Mailbox Stat Checker is a diagnostic tool that checks the status of Microsoft Dynamics CRM mailboxes. Mailbox Stat Checker also enables and approves emails and mailboxes at the press of a button.</h2>
+      <a href="https://github.com/BrianJVarley/XRM-Mailbox-Stat-Checker" class="btn">View on GitHub</a>
+      <a href="https://github.com/BrianJVarley/XRM-Mailbox-Stat-Checker/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/BrianJVarley/XRM-Mailbox-Stat-Checker/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="welcome-to-xrm-mailbox-diagnostic-tool" class="anchor" href="#welcome-to-xrm-mailbox-diagnostic-tool" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to XRM Mailbox Diagnostic Tool.</h3>
+
+<p>The XRM Mailbox Stat Checker is a diagnostic tool that checks the status of Microsoft Dynamics CRM mailboxes that are in "pending send status". </p>
+
+<p>Mailbox Stat Checker also enables and approves emails and mailboxes at the press of a button.</p>
+
+<h3>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>Why are emails in pending send status?</p>
+
+<p>This is a common question in Dynamics CRM and means the email hasn’t been processed yet by the email router or it was processed and there was an erorr .In most cases this is due to one of two missing settings on the user or queue’s email configurations in CRM:</p>
+
+<p>1.Email address isn’t “Approved” – This setting approves the selected email to send emails from Dynamics.</p>
+
+<p>2.Mailbox isn’t “Tested and Enabled” – Testing and enabling a mailbox does slightly more than the approve email setting and only applies to emails with server-side synchronization. It also checks the following details:</p>
+
+<p>◙The mailbox email address is correct.
+◙The connection to the email server is working.
+◙You have the right privileges to access the mailbox.</p>
+
+<p>Luckily I’ve created a tool to do just that for queue and user’s email addresses. </p>
+
+<p>Note that to do either of these configuration changes you need to be signed into the tool as a System Admin or the owner of the mailbox.</p>
+
+<p>After approving or enabling the email using the tool, resend the email in CRM wait 10 minutes for the email router to process the email. Then check the status of the pending send email. You should now see either a status of “sending” or “sent”.</p>
+
+<h3>
+<a id="user-guide" class="anchor" href="#user-guide" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User Guide</h3>
+
+<p><img src="http://brianvarley.com/wp-content/uploads/2016/03/3.png" alt=""></p>
+
+<p><img src="http://brianvarley.com/wp-content/uploads/2016/03/33.png" alt=""></p>
+
+<p><img src="http://brianvarley.com/wp-content/uploads/2016/03/2.png" alt=""></p>
+
+<p>After enabling or approving the email - resend the email in Dynamics and check the send status which should now be sent or sending:</p>
+
+<p><img src="http://brianvarley.com/wp-content/uploads/2016/03/1.png" alt=""></p>
+
+<h3>
+<a id="dynamics-email-traffic-flow" class="anchor" href="#dynamics-email-traffic-flow" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dynamics Email Traffic Flow</h3>
+
+<p><img src="http://brianvarley.com/wp-content/uploads/2016/03/8424.1.png-550x0.png" alt="Dynamics Email Traffic Flow"></p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>Tool Developer - <a href="https://github.com/BrianJVarley" class="user-mention">@BrianJVarley</a> </p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with this tool? Check out our <a href="brianvarley9@gmail.com">contact support</a> and we’ll help you sort it out.
+Or for further email truble shooting tips in Dynamics check out this great blog post on MSDN - </p>
+
+<p><a href="Dynamics%20Email%20Router%20Trouble%20Shooting">https://blogs.msdn.microsoft.com/crm/2015/08/31/test-and-enable-mailboxes-in-microsoft-dynamics-crm-2015/</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/BrianJVarley/XRM-Mailbox-Stat-Checker">Xrm-mailbox-stat-checker</a> is maintained by <a href="https://github.com/BrianJVarley">BrianJVarley</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
